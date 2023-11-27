@@ -11,11 +11,12 @@ const ERC20_ABI = [
     " function decimals() public view returns (uint8)",
     "function totalSupply() public view returns (uint256)"
 ]
-const address = '0x6B175474E89094C44Da98b954EedeAC495271d0F' // DAI Contract
-const contract = new Contract(address, ERC20_ABI, provider);
+
 
 
 const daiContract = async () => {
+    const address = '0x6B175474E89094C44Da98b954EedeAC495271d0F' // DAI Contract
+    const contract = new Contract(address, ERC20_ABI, provider);
     try {
         const symbol = await contract.symbol();
         const tokenName = await contract.name();
