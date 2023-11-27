@@ -12,8 +12,6 @@ const ERC20_ABI = [
     "function totalSupply() public view returns (uint256)"
 ]
 
-
-
 const daiContract = async () => {
     const address = '0x6B175474E89094C44Da98b954EedeAC495271d0F' // DAI Contract
     const contract = new Contract(address, ERC20_ABI, provider);
